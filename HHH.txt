@@ -1,0 +1,102 @@
+// COPPY CÁI NÀY VÀO SAU </body> (dòng thứ 2 từ cuối trang product-page trở lên)
+
+<script type="text/javascript">
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id){
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(){
+            var id = this.textContent;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+            showContent(id);
+        });
+    }
+    showContent('TTLH');
+</script>
+
+
+// COPPY PHẦN NÀY VÀO doanthoitrang\home\static\styles (tạo 1 styles mới rồi bỏ nó vào cũng đc) Tại tôi không biết ông để ở đâu
+div.container {
+    width: 60%;  
+    margin: auto;  
+}
+/* định dạng thẻ div chưa các button tab */
+div.tab {
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    background-color: #f1f1f1; 
+}
+ 
+/* định dạng các button tab */
+div.tab button {
+    background-color: inherit; 
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+ 
+/* đổi màu khi một button tab được hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+ 
+/* đổi màu nền cho tab đang được hiển thị nội dung */
+div.tab button.active {
+    background-color: #ccc;
+}
+ 
+/* định dạng nội dung hiển thị */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+// ĐẶT CÁI NÀY Ở PHẦN FOOTER
+<div class="tab">
+  <button class="tablinks active">PHP</button>
+  <button class="tablinks">HTML</button>
+  <button class="tablinks">CSS</button>
+</div>
+ 
+<div id="TTLH" class="tabcontent">
+    <h3>Thông tin liên hệ</h3>
+    <p>
+       Đạo tu : Phượng sơ - cầm tâm - đằng vân - huy dương - càn nguyên - vô tướng - thái thanh.
+Võ tu : tiên thiên ,dịch cân , rèn cốt ,quy phủ, hóa huyết
+Yêu tu : hóa hình,ngưng đan, vạn tượng, yêu vương, tổ thánh, khai thiên
+    </p>
+</div>
+ 
+<div id="HDSD" class="tabcontent">
+    <h3>Hướng dẫn sử dụng</h3>
+    <p>
+        Đạo tu : Phượng sơ - cầm tâm - đằng vân - huy dương - càn nguyên - vô tướng - thái thanh.
+Võ tu : tiên thiên ,dịch cân , rèn cốt ,quy phủ, hóa huyết
+Yêu tu : hóa hình,ngưng đan, vạn tượng, yêu vương, tổ thánh, khai thiên
+    </p> 
+</div>
+ 
+<div id="EMAIL" class="tabcontent">
+    <h3>EMAIL</h3>
+    <p>
+        Đạo tu : Phượng sơ - cầm tâm - đằng vân - huy dương - càn nguyên - vô tướng - thái thanh.
+Võ tu : tiên thiên ,dịch cân , rèn cốt ,quy phủ, hóa huyết
+Yêu tu : hóa hình,ngưng đan, vạn tượng, yêu vương, tổ thánh, khai thiên
+    </p>
+</div>
